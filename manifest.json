@@ -1,0 +1,23 @@
+{
+	"name": "Sisyphean Web",
+	"description": "A browser extension that collages web pages, removing their usability for art.",
+	"version": "1.0",
+	"homepage_url": "http://www.jeffreythompson.org",
+	"browser_action": {
+		"default_title": "Sisyphean Web",
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": true
+	},
+	"content_scripts": [{
+		"matches": [ "<all_urls>" ],
+		"js": [ "jquery-3.2.1.min.js" ]
+	}],
+	"manifest_version": 2
+}
